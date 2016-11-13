@@ -22,6 +22,7 @@ defmodule MiCaserito.Router do
     pipe_through [:browser, :browser_session] # Use the default browser stack
 
     get "/", PageController, :index
+    get "/gps", PageController, :gps
     get "/logout", PageController, :logout
     resources "/mercados", MercadoController
   end
