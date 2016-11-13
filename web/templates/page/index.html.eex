@@ -1,5 +1,5 @@
 <div class="jumbotron">
-  <p class="lead"><%= link "Login with Github", to: auth_path(@conn, :request, "github"), class: "btn btn-success text-center" %></p>
+  <p class="lead"><%= link "Login with Facebook", to: auth_path(@conn, :request, "facebook"), class: "btn btn-success text-center" %></p>
 </div>
 <nav>
       <div class="nav-wrapper"><a href="#" class="brand-logo right"><img src="assets/imagenes/logo-ma.png"></a><a href="#" data-activates="mobile-demo" class="button-collapse"><img src="assets/imagenes/menu.png" alt=""></a>

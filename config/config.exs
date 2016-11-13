@@ -24,7 +24,7 @@ config :logger, :console,
 
 config :ueberauth, Ueberauth,
   providers: [
-    github: {Ueberauth.Strategy.Github, []}
+    facebook: {Ueberauth.Strategy.Facebook, []}
   ]
 
 # Import environment specific config. This must remain at the bottom
