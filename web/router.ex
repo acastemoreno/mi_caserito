@@ -19,6 +19,13 @@ defmodule MiCaserito.Router do
     get "/", PageController, :index
   end
 
+  scope "/auth", MiCaserito do
+    pipe_through :browser
+
+    get "/:provider", AuthController, :request
+    get "/:provider/callback", AuthController, :callback
+  end
+
   # Other scopes may use custom stacks.
   # scope "/api", MiCaserito do
   #   pipe_through :api

@@ -1,0 +1,187 @@
+.container {
+  width: 90%; }
+
+h1 {
+  margin: 0; }
+
+h2 {
+  font-family: "Raleway", Arial, sans-serif;
+  font-size: 3em;
+  font-weight: 900;
+  margin-bottom: 0; }
+
+h3 {
+  font-family: "Raleway", Arial, sans-serif;
+  font-size: 2.7em;
+  font-weight: 800; }
+
+h4 {
+  font-family: "Raleway", Arial, sans-serif;
+  font-size: 2.2em;
+  font-weight: 700; }
+
+p {
+  font-family: "Raleway", Arial, sans-serif;
+  font-size: 1.3em;
+  font-weight: 500; }
+
+hr {
+  background-color: #88E39D;
+  border: none;
+  height: 10px;
+  margin-right: 65%; }
+
+nav {
+  background-color: white; }
+  nav img {
+    padding-top: 10px;
+    width: 45%; }
+  nav ul a {
+    font-family: "Raleway", Arial, sans-serif;
+    font-size: 1.6em;
+    font-weight: 600;
+    color: #2D2D2D; }
+    nav ul a:hover {
+      -webkit-transition: all 0.3s ease-out;
+      -moz-transition: all 0.3s ease-out;
+      -o-transition: all 0.3s ease-out;
+      transition: all 0.3s ease-out;
+      color: #6B8633;
+      background-color: transparent; }
+
+#indexbg {
+  background: url("../imagenes/bgindex.jpg") 0 0 no-repeat fixed;
+  background-size: cover;
+  padding-top: 80px; }
+  #indexbg .imglogo {
+    width: 80%; }
+  #indexbg .imgiphone {
+    width: 70%; }
+  #indexbg .fa {
+    font-size: 5em; }
+
+#services {
+  padding: 6% 0; }
+  #services img {
+    width: 60%; }
+
+#download {
+  background: url("../imagenes/download.png") 100% 0 no-repeat;
+  background-size: 55%;
+  padding-bottom: 3%; }
+  #download .btn {
+    font-family: "Raleway", Arial, sans-serif;
+    font-size: 1.7em;
+    font-weight: 200;
+    background-color: #FDAE2B;
+    border-radius: 45px;
+    width: 100%;
+    margin-top: 50px;
+    height: 50px;
+    padding-top: 2%; }
+  #download .downbtn {
+    padding-top: 60px; }
+    #download .downbtn img {
+      width: 300px; }
+
+footer {
+  background-color: #FDAE2B;
+  padding: 20px 0; }
+  footer p {
+    margin: 0; }
+
+@media screen and (max-width: 480px) {
+  #indexbg {
+    background: url("../imagenes/bgindexsmall.jpg") 0 0 no-repeat fixed;
+    background-size: cover;
+    padding-top: 30px; }
+    #indexbg .imgiphone {
+      width: 50%; }
+    #indexbg h3 {
+      font-size: 1.5em; }
+
+  #download {
+    background: url("../imagenes/download.png") 100% 83% no-repeat;
+    background-size: 45%;
+    padding-bottom: 22px; }
+    #download .btn {
+      font-family: "Raleway", Arial, sans-serif;
+      font-size: 0.85em;
+      font-weight: 200;
+      height: 42px;
+      margin-top: 0px; }
+    #download .downbtn {
+      padding-top: 0px; }
+      #download .downbtn img {
+        width: 100px; }
+
+  footer {
+    margin-top: -50px;
+    padding: 15px 0; }
+    footer p {
+      font-size: 1em; } }
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  #indexbg {
+    background: url("../imagenes/bgindexsmall.jpg") 0 0 no-repeat fixed;
+    background-size: cover; }
+    #indexbg .imgiphone {
+      width: 100%; }
+    #indexbg h3 {
+      font-size: 2.1em; }
+
+  #download h5 {
+    margin-right: 30%; }
+  #download .btn {
+    font-family: "Raleway", Arial, sans-serif;
+    font-size: 0.85em;
+    font-weight: 200;
+    height: 42px;
+    margin-top: 0px; }
+  #download .downbtn {
+    padding-top: 0px; }
+    #download .downbtn img {
+      width: 80px; }
+
+  footer {
+    margin-top: -40px;
+    padding: 15px 0; }
+    footer p {
+      font-size: 1em; } }
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  #indexbg {
+    background: url("../imagenes/bgindexmedium.jpg") 0 0 no-repeat fixed;
+    background-size: cover; }
+
+  #download {
+    background: url("../imagenes/download.png") 100% 0 no-repeat;
+    background-size: 55%;
+    padding-bottom: 3%; }
+    #download h5 {
+      margin-right: 30%; }
+    #download .btn {
+      font-family: "Raleway", Arial, sans-serif;
+      font-size: 0.85em;
+      font-weight: 200;
+      height: 42px;
+      margin-top: 0px; }
+    #download .downbtn {
+      padding-top: 10px; }
+      #download .downbtn img {
+        width: 150px; }
+
+  footer {
+    margin-top: -20px;
+    padding: 15px 0; }
+    footer p {
+      font-size: 1em; } }
+@media screen and (min-width: 1024px) and (max-width: 1300px) {
+  #download {
+    background: url("../imagenes/download.png") 100% 0 no-repeat;
+    background-size: 55%;
+    padding-bottom: 3%; }
+    #download .downbtn {
+      padding-top: 30px; }
+      #download .downbtn img {
+        width: 200px; } }
+
+/*# sourceMappingURL=index.css.map */
