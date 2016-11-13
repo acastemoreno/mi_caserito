@@ -1,0 +1,32 @@
+<h2>Listing mercados</h2>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Nombre</th>
+      <th>Latitud</th>
+      <th>Longitud</th>
+      <th>Direccion</th>
+
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+<%= for mercado <- @mercados do %>
+    <tr>
+      <td><%= mercado.nombre %></td>
+      <td><%= mercado.latitud %></td>
+      <td><%= mercado.longitud %></td>
+      <td><%= mercado.direccion %></td>
+
+      <td class="text-right">
+        <%= link "Show", to: mercado_path(@conn, :show, mercado), class: "waves-effect waves-light btn" %>
+        <%= link "Edit", to: mercado_path(@conn, :edit, mercado), class: "waves-effect waves-light btn blue" %>
+        <%= link "Delete", to: mercado_path(@conn, :delete, mercado), method: :delete, data: [confirm: "Are you sure?"], class: "waves-effect waves-light btn red" %>
+      </td>
+    </tr>
+<% end %>
+  </tbody>
+</table>
+
+<%= link "New mercado", to: mercado_path(@conn, :new) %>

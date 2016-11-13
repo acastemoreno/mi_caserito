@@ -9,15 +9,22 @@ defmodule MiCaserito.Router do
     plug :put_secure_browser_headers
   end
 
+  pipeline :browser_session do
+    plug Guardian.Plug.VerifySession
+    plug Guardian.Plug.LoadResource
+  end
+
   pipeline :api do
     plug :accepts, ["json"]
   end
 
   scope "/", MiCaserito do
-    pipe_through :browser # Use the default browser stack
+    pipe_through [:browser, :browser_session] # Use the default browser stack
 
     get "/", PageController, :index
     get "/gps", PageController, :gps
+    get "/logout", PageController, :logout
+    resources "/mercados", MercadoController
   end
 
   scope "/auth", MiCaserito do

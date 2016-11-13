@@ -15,6 +15,13 @@
       <p class="alert alert-danger" role="alert"><%= get_flash(@conn, :error) %></p>
 
       <main role="main">
+        <div class="jumbotron">
+          <%= if logged_in?(@conn) do %>
+            <p class="lead"><%= link "Logout", to: page_path(@conn, :logout), class: "btn btn-success text-center" %></p>
+          <% else %>
+            <p class="lead"><%= link "Login with Facebook", to: auth_path(@conn, :request, "facebook"), class: "btn btn-success text-center" %></p>
+          <% end %>
+        </div>
         <%= render @view_module, @view_template, assigns %>
       </main>
 

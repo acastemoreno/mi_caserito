@@ -36,8 +36,8 @@ config :phoenix, :stacktrace_depth, 20
 # Configure your database
 config :mi_caserito, MiCaserito.Repo,
   adapter: Ecto.Adapters.Postgres,
-  username: "postgres",
-  password: "postgres",
+  username: "mi_caserito_dev",
+  password: "123456789",
   database: "mi_caserito_dev",
   hostname: "localhost",
   pool_size: 10
