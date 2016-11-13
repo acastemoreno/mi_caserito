@@ -1,0 +1,28 @@
+<h2>Show mercado</h2>
+
+<ul>
+
+  <li>
+    <strong>Nombre:</strong>
+    <%= @mercado.nombre %>
+  </li>
+
+  <li>
+    <strong>Latitud:</strong>
+    <%= @mercado.latitud %>
+  </li>
+
+  <li>
+    <strong>Longitud:</strong>
+    <%= @mercado.longitud %>
+  </li>
+
+  <li>
+    <strong>Direccion:</strong>
+    <%= @mercado.direccion %>
+  </li>
+
+</ul>
+
+<%= link "Edit", to: mercado_path(@conn, :edit, @mercado) %>
+<%= link "Back", to: mercado_path(@conn, :index) %>

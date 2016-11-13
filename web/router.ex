@@ -23,6 +23,7 @@ defmodule MiCaserito.Router do
 
     get "/", PageController, :index
     get "/logout", PageController, :logout
+    resources "/mercados", MercadoController
   end
 
   scope "/auth", MiCaserito do
