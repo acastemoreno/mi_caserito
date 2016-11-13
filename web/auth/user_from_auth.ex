@@ -12,8 +12,9 @@ defmodule MiCaserito.UserFromAuth do
   defp create_or_get(nil, auth, repo) do
     user = User.changeset(%User{}, %{email: auth.info.email, nombre: name_from_auth(auth), is_admin: false})
     |> repo.insert!()
-    |> build_assoc(:authorization)
-    user |> Authorization.changeset(%{
+
+    user |> build_assoc(:authorization)
+    |> Authorization.changeset(%{
         provider: to_string(auth.provider),
         uid: auth.uid,
         token: auth.credentials.token,
@@ -21,6 +22,7 @@ defmodule MiCaserito.UserFromAuth do
         expires_at: auth.credentials.expires_at
       })
     |> repo.insert()
+    user
   end
 
   defp create_or_get(%Authorization{} = auth, _auth, repo) do
