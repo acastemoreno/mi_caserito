@@ -22,7 +22,7 @@ defmodule MiCaserito.UserFromAuth do
         expires_at: auth.credentials.expires_at
       })
     |> repo.insert()
-    user
+    {:ok, user}
   end
 
   defp create_or_get(%Authorization{} = auth, _auth, repo) do
