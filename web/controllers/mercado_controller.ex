@@ -8,12 +8,12 @@ defmodule MiCaserito.MercadoController do
 
   def index(conn, _params, _userlog, _claims) do
     mercados = Repo.all(Mercado)
-    render(conn, "index.html", mercados: mercados)
+    render(conn, "index.html", mercados: mercados, url: nil)
   end
 
   def new(conn, _params, _userlog, _claims) do
     changeset = Mercado.changeset(%Mercado{})
-    render(conn, "new.html", changeset: changeset)
+    render(conn, "new.html", changeset: changeset, url: nil)
   end
 
   def create(conn, %{"mercado" => mercado_params}, _userlog, _claims) do
@@ -25,19 +25,19 @@ defmodule MiCaserito.MercadoController do
         |> put_flash(:info, "Mercado created successfully.")
         |> redirect(to: mercado_path(conn, :index))
       {:error, changeset} ->
-        render(conn, "new.html", changeset: changeset)
+        render(conn, "new.html", changeset: changeset, url: nil)
     end
   end
 
   def show(conn, %{"id" => id}, _userlog, _claims) do
     mercado = Repo.get!(Mercado, id)
-    render(conn, "show.html", mercado: mercado)
+    render(conn, "show.html", mercado: mercado, url: nil)
   end
 
   def edit(conn, %{"id" => id}, _userlog, _claims) do
     mercado = Repo.get!(Mercado, id)
     changeset = Mercado.changeset(mercado)
-    render(conn, "edit.html", mercado: mercado, changeset: changeset)
+    render(conn, "edit.html", mercado: mercado, changeset: changeset, url: nil)
   end
 
   def update(conn, %{"id" => id, "mercado" => mercado_params}, _userlog, _claims) do
@@ -50,7 +50,7 @@ defmodule MiCaserito.MercadoController do
         |> put_flash(:info, "Mercado updated successfully.")
         |> redirect(to: mercado_path(conn, :show, mercado))
       {:error, changeset} ->
-        render(conn, "edit.html", mercado: mercado, changeset: changeset)
+        render(conn, "edit.html", mercado: mercado, changeset: changeset, url: nil)
     end
   end
 
