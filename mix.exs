@@ -38,7 +38,8 @@ defmodule MiCaserito.Mixfile do
      {:phoenix_live_reload, "~> 1.0", only: :dev},
      {:gettext, "~> 0.11"},
      {:cowboy, "~> 1.0"},
-     {:ueberauth_facebook, "~> 0.5"}]
+     {:ueberauth_facebook, "~> 0.5"},
+     {:guardian, "~> 0.13.0"}]
   end
 
   # Aliases are shortcuts or tasks specific to the current project.
