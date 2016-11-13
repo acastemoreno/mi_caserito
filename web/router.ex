@@ -17,6 +17,7 @@ defmodule MiCaserito.Router do
     pipe_through :browser # Use the default browser stack
 
     get "/", PageController, :index
+    get "/gps", PageController, :gps
   end
 
   scope "/auth", MiCaserito do

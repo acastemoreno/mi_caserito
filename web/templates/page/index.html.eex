@@ -23,5 +23,7 @@
       <h6>¿Donde te encuentras?</h6><a href="#" data-activates="dropdown1" class="dropdown-button btn">Selecciona tu distrito</a>
       <ul id="dropdown1" class="dropdown-content">
         <li><a href="mapamercados.html">Lima</a></li>
-      </ul><a href="mapaMercadoCercano.html" class="btn">Activa mi GPS    </a>
+      </ul><%= link "Activa mi GPS", to: page_path(@conn, :gps)%>
+
+      <a href="gps.html.eex" class="btn">Activa mi GPS    </a>
     </section>

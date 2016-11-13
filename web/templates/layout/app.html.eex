@@ -19,6 +19,14 @@
       </main>
 
     </div> <!-- /container -->
+
+    
     <script src="<%= static_path(@conn, "/js/app.js") %>"></script>
+    <%= if @url do %>
+    <script src="<%= static_path(@conn, "/js/gps.js") %>"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDcQHs_d_iHOukCURknqOC6faRpO3PTf1s&signed_in=true&callback=initMap"
+        async defer>
+    </script>
+    <% end %>
   </body>
 </html>
